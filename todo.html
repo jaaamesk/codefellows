@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script>
+			$(document).ready (function () {
+				$("button").on("click",function() {
+					var item='<li>' + $("#todo").val() + '</li>'
+					$("ul").append(item);
+					$('li').last().click (function () {
+						$(this).last().remove();
+						});
+				});
+			});
+		</script>
+</head>
+ <body>
+<p><input type="text" id="todo" placeholder="item">
+<button>Add</button>
+</p>
+<h2>List of Items</h2>
+
+<ul>
+</ul>
+
+</body>
+
+
+
+
+</html>
